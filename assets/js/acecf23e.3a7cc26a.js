@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdevcolibri=self.webpackChunkdevcolibri||[]).push([[1903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/devcolibri/blog","blogTitle":"Blog","authorsListPath":"/devcolibri/blog/authors"}')}}]);
