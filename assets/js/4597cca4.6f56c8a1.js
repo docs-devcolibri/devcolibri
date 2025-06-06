@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdevcolibri=self.webpackChunkdevcolibri||[]).push([[6111],{2761:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"kotlin"}')}}]);
