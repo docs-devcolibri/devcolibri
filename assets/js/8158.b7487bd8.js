@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdevcolibri=self.webpackChunkdevcolibri||[]).push([[8158],{8158:(e,c,a)=>{a.r(c),a.d(c,{DocSearchModal:()=>r.a1});var r=a(3219)}}]);
