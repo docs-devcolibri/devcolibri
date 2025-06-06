@@ -51,14 +51,15 @@ import clsx from 'clsx';
 import styles from './index.module.css';
 import { JSX } from 'react/jsx-runtime';
 
+
 export default function HomePage(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
 
   return (
     <Layout
       title={siteConfig.title}
       description={siteConfig.tagline}>
-      <header className={clsx('hero', styles.heroBanner)}>        
+      <header className={clsx('hero', styles.heroBanner)}>
         <div className={clsx('container', styles.heroContent)}>
           <img
             src="/img/dark-logo.svg"

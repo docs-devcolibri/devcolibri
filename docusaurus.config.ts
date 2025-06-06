@@ -37,12 +37,49 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'guides', // 👈 Уникальный ID
-        path: 'guides', // 📁 Папка с файлами Markdown
-        routeBasePath: 'guides', // 🔗 URL будет /guides/...
-        sidebarPath: require.resolve('./sidebarsGuides.ts'), // 📄 Отдельный файл сайдбара
+        id: 'guides',
+        path: 'guides',
+        routeBasePath: 'guides',
+        sidebarPath: require.resolve('./sidebarsGuides.ts'),
       } satisfies DocsOptions,
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'studio',
+        path: 'studio',
+        routeBasePath: 'studio',
+        sidebarPath: require.resolve('./sidebarsStudio.ts'),
+      } satisfies DocsOptions,
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'kotlin',
+        path: 'kotlin',
+        routeBasePath: 'kotlin',
+        sidebarPath: undefined
+      } satisfies DocsOptions,
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'java',
+        path: 'java',
+        routeBasePath: 'java',
+        sidebarPath: undefined
+      } satisfies DocsOptions,
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'resource',
+        path: 'resource',
+        routeBasePath: 'resource',
+        sidebarPath: undefined
+      } satisfies DocsOptions,
+    ],
+
   ],
 
   presets: [
@@ -81,6 +118,14 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    announcementBar: {
+      id: 'devcolibri-dev-warning9', // любой уникальный ID
+      content:
+        '🚧 Этот сайт находится в активной разработке. Содержимое может меняться.',
+      // backgroundColor: '#1a1a1a', // тёмный фон
+      // textColor: '#ffffff',       // белый текст
+      isCloseable: true,         
+    },
     navbar: {
       // title: 'Девколибри',
       hideOnScroll: true,
@@ -89,21 +134,8 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'tutorialSidebar',
-        //   position: 'left',
-        //   label: 'Туториал',
-        // },
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'guidesSidebar',
-        //   position: 'left',
-        //   label: 'Гайды',
-        //   docsPluginId: 'guides',
-        // },
         {
-          label: 'Документация',
+          label: 'Android',
           position: 'left',
           items: [
             {
@@ -119,7 +151,35 @@ const config: Config = {
             },
           ],
         },
+        {
+          type: 'docSidebar',
+          sidebarId: 'defaultSidebar',
+          position: 'left',
+          label: 'Kotlin',
+          docsPluginId: 'kotlin',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'defaultSidebar',
+          position: 'left',
+          label: 'Java',
+          docsPluginId: 'java',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'defaultSidebar',
+          position: 'left',
+          label: 'Ресурсы',
+          docsPluginId: 'resource',
+        },
         { to: '/blog', label: 'Блог', position: 'left' },
+        {
+          type: 'docSidebar',
+          sidebarId: 'studioSidebar',
+          position: 'right',
+          label: 'Android-studio',
+          docsPluginId: 'studio',
+        },
         {
           href: 'https://github.com/docs-devcolibri/devcolibri',
           position: 'right',
